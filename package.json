@@ -10,7 +10,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/GranitaSwap/GranitaSwap-sdk.git",
+  "repository": "https://github.com/GranitaSwap/granitaswap-sdk",
   "keywords": [
     "granitaswap",
     "ethereum",
