@@ -56,9 +56,16 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
   }
 }
 
-export const METIS = {
+export const WETH = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
+    '0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000',
+    18,
+    'METIS',
+    'Metis Token'
+  ),
+  [ChainId.TESTNET]: new Token(
+    ChainId.TESTNET,
     '0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000',
     18,
     'METIS',
