@@ -9,11 +9,20 @@ import { Currency } from './currency'
 export class Token extends Currency {
   public readonly chainId: ChainId
   public readonly address: string
+  public readonly projectLink?: string
 
-  public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
+  public constructor(
+    chainId: ChainId,
+    address: string,
+    decimals: number,
+    symbol?: string,
+    name?: string,
+    projectLink?: string
+  ) {
     super(decimals, symbol, name)
     this.chainId = chainId
     this.address = validateAndParseAddress(address)
+    this.projectLink = projectLink
   }
 
   /**
@@ -62,20 +71,23 @@ export const WETH = {
     '0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000',
     18,
     'METIS',
-    'Metis Token'
+    'Metis Token',
+    ''
   ),
   [ChainId.TESTNET]: new Token(
     ChainId.TESTNET,
     '0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000',
     18,
     'METIS',
-    'Metis Token'
+    'Metis Token',
+      ''
   ),
   [ChainId.HARDHAT]: new Token(
     ChainId.HARDHAT,
     '0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000',
     18,
     'METIS',
-    'Metis Token'
+    'Metis Token',
+      ''
   )
 }
